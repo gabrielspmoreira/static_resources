@@ -1,9 +1,9 @@
 
 
 var tags = [
-              ['teste1', 100],
-              ['teste2', 50],
-              ['teste3', 10]
+              ['devops', 100],
+              ['carros', 50],
+              ['startup', 10]
              ];
 
         /*wordCount.forEach(function(d) {
@@ -27,13 +27,9 @@ var tags = [
         var clicked = function(ev) {
           if (ev.target.nodeName === "SPAN") {
             var tag = ev.target.textContent;
-            var tagElem;
-            if (tags.some(function(el) { if (el[0] === tag) {tagElem = el; return true;} return false; })) {
-            document.getElementById("details").innerText = "There were " + tagElem[1] + 
-                " mentions of “" + tag + "” in the last year";
-            }
-          } else {
-            document.getElementById("details").innerText = "";
+
+            window.location.href = "http://d-coder.smartcanvas.com/"+tag;
+
           }
         }
         document.getElementById("cloud").addEventListener("click", clicked)
