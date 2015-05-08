@@ -6,7 +6,7 @@ var scripts = document.getElementsByTagName('script');
 var myScript = scripts[ scripts.length - 1 ];
 
 var queryString = myScript.src.replace(/^[^\?]+\??/,'');
-window.alert(queryString);
+window.alert(myScript.src);
 
 
 
