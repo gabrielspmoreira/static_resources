@@ -1,9 +1,10 @@
 
 
 var tags = [
-              ['devops', 100],
+              ['devops', 70],
               ['carros', 50],
-              ['startup', 10]
+              ['startup', 10],
+              ['sao paulo', 10]
              ];
 
         /*wordCount.forEach(function(d) {
@@ -28,7 +29,7 @@ var tags = [
           if (ev.target.nodeName === "SPAN") {
             var tag = ev.target.textContent;
 
-            window.location.href = "http://d-coder.smartcanvas.com/"+tag;
+            window.location.href = "http://d-coder.smartcanvas.com/"+tag.replace(' ','+');
 
           }
         }
