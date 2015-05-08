@@ -1,47 +1,42 @@
 
 // http://wowmotty.blogspot.com.br/2010/04/get-parameters-from-your-script-tag.html
 
+$( ".smartconnect_wordcloud" ).each(function() {
+    console.log($(this).attr("data-id");
+    cloud_dom_element = $(this).get(0);
 
-var scripts = document.getElementsByTagName('script');
-var myScript = scripts[ scripts.length - 1 ];
+    relevantTermsRaw = $(this).attr("data-relevantterms");
 
-var queryString = myScript.src.replace(/^[^\?]+\??/,'');
-//window.alert(myScript.src);
+    if (!relevantTerms) 
+        return;
 
+    relevantTerms = relevantTermsRaw.split(',');
 
+    var tags = [];
+    relevantTerms.slice(0,50).forEach(function(term) {
+        splittedTerm = term.split('|');
+        tags.push([splittedTerm[0],parseInt(splittedTerm[1])]);
+    });
 
+    tags_list = tags.map(function(word) { return [word[0], Math.round(word[1]/2)]; })
+    console.log(tags_list);
 
-var tags = [
-              ['devops', 70],
-              ['carros', 50],
-              ['startup', 10],
-              ['sao paulo', 10]
-             ];
-
-        /*wordCount.forEach(function(d) {
-          tags.push([d.key,parseInt(d.values)]);
-        });*/
-
-        tags = tags.slice(0,50);
-
-        WordCloud(document.getElementById('cloud'), {
-          gridSize: 12, 
-          weightFactor: 2, 
-          rotateRatio: 0.5,
-          list : tags.map(function(word) { return [word[0], Math.round(word[1]/2)]; }), 
-          wait: 10
-        });
+    WordCloud(cloud_dom_element, {
+      gridSize: 12, 
+      weightFactor: 2, 
+      rotateRatio: 0.5,
+      list : tags_list, 
+      wait: 10
+    });
 
 
-        //console.log(tags.map(function(word) { return [word[0], Math.round(word[1]/2)]; }));
-        //console.log(tagMap);
-        
-        var clicked = function(ev) {
-          if (ev.target.nodeName === "SPAN") {
-            var tag = ev.target.textContent;
+    var clicked = function(ev) {
+      if (ev.target.nodeName === "SPAN") {
+        var tag = ev.target.textContent;
 
-            window.location.href = "http://d-coder.smartcanvas.com/"+tag.replace(' ','+');
+        window.location.href = "http://d-coder.smartcanvas.com/"+tag.replace(' ','+');
 
-          }
-        }
-        document.getElementById("cloud").addEventListener("click", clicked)
+      }
+    }
+    cloud_dom_element.addEventListener("click", clicked);
+});
