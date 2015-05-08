@@ -1,8 +1,5 @@
-
-// http://wowmotty.blogspot.com.br/2010/04/get-parameters-from-your-script-tag.html
-
 $( ".smartconnect_wordcloud" ).each(function() {
-    console.log($(this).attr("data-id"));
+    console.log($(this).attr("data-userid"));
     cloud_dom_element = $(this).get(0);
 
     relevantTermsRaw = $(this).attr("data-relevantterms");
@@ -28,7 +25,6 @@ $( ".smartconnect_wordcloud" ).each(function() {
       list : tags_list, 
       wait: 10
     });
-
 
     var clicked = function(ev) {
       if (ev.target.nodeName === "SPAN") {
