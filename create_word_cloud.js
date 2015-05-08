@@ -1,4 +1,24 @@
 
+// http://wowmotty.blogspot.com.br/2010/04/get-parameters-from-your-script-tag.html
+
+
+// extract out the parameters
+function gup(n,s){
+  n = n.replace(/[\[]/,"\\[").replace(/[\]]/,"\\]");
+  var p = (new RegExp("[\\?&]"+n+"=([^&#]*)")).exec(s);
+  return (p===null) ? "" : p[1];
+}
+
+
+var scriptSrc = $('script[src*=create_word_cloud.js]').attr('src');
+var msg = gup( 'message', scriptSrc );
+
+// do something with the parameters
+alert( 'message = ' + msg );
+
+
+
+
 
 var tags = [
               ['devops', 70],
