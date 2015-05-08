@@ -7,7 +7,7 @@ $( ".smartconnect_wordcloud" ).each(function() {
 
     relevantTermsRaw = $(this).attr("data-relevantterms");
 
-    if (!relevantTerms) 
+    if (!relevantTermsRaw) 
         return;
 
     relevantTerms = relevantTermsRaw.split(',');
