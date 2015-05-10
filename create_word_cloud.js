@@ -1,4 +1,4 @@
-$( document ).ready(function() {
+$( document ).load(function() {
     $( ".smartconnect_wordcloud" ).each(function() {
         console.log($(this).attr("data-userid"));
         cloud_dom_element = $(this).get(0);
