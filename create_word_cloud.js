@@ -1,4 +1,4 @@
-$( document ).load(function() {
+$( window ).ready(function() {
     alert('loaded')
     $( ".smartconnect_wordcloud" ).each(function() {
         alert('found')
