@@ -1,7 +1,5 @@
-$( window ).ready(function() {
-    alert('loaded')
+$( window ).load(function() {
     $( ".smartconnect_wordcloud" ).each(function() {
-        alert('found')
         console.log($(this).attr("data-userid"));
         cloud_dom_element = $(this).get(0);
 
