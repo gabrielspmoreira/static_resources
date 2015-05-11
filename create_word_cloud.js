@@ -1,9 +1,11 @@
 function processWordClouds() {
-    $( ".smartconnect_wordcloud" ).each(function() {   
+    $( ".smartconnect_wordcloud" ).each(function() {      
         if ($(this).attr("data-processed")) return;
 
         console.log('Setting wordclouds for '+$(this).attr("data-userid"));
         var cloud_dom_element = $(this).get(0);
+
+        console.log($(this).outerWidth())
 
         var relevantTermsRaw = $(this).attr("data-relevantterms");
 
