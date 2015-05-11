@@ -18,7 +18,7 @@ function processWordClouds() {
             tags.push([splittedTerm[0],parseInt(splittedTerm[1])]);
         });
 
-        var tags_list = tags.map(function(word) { return [word[0], Math.round(word[1]/3)]; })
+        var tags_list = tags.map(function(word) { return [word[0], Math.round(word[1]/4)]; })
 
         WordCloud(cloud_dom_element, {
           gridSize: 12, 
@@ -34,7 +34,7 @@ function processWordClouds() {
           if (ev.target.nodeName === "SPAN") {
             var tag = ev.target.textContent;
 
-            window.location.href = "/"+tag.replace(' ','+');
+            window.location.href = "/"+tag.replace(' ','+').toLowerCase();
 
           }
         }
