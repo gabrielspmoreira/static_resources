@@ -1,7 +1,9 @@
 function processWordClouds() {
-    $( ".smartconnect_wordcloud" ).each(function() {      
+    $( ".smartconnect_wordcloud" ).each(function() {   
+        console.log($(this).attr("data-processed"));
+           
         if ($(this).attr("data-processed")) return;
-        
+
         console.log('Setting wordclouds for '+$(this).attr("data-userid"));
         var cloud_dom_element = $(this).get(0);
 
