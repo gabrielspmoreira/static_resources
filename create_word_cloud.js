@@ -5,8 +5,6 @@ function processWordClouds() {
         console.log('Setting wordclouds for '+$(this).attr("data-userid"));
         var cloud_dom_element = $(this).get(0);
 
-        console.log($(this).outerWidth())
-
         var relevantTermsRaw = $(this).attr("data-relevantterms");
 
         if (!relevantTermsRaw) 
@@ -20,7 +18,10 @@ function processWordClouds() {
             tags.push([splittedTerm[0],parseInt(splittedTerm[1])]);
         });
 
-        var tags_list = tags.map(function(word) { return [word[0], Math.round(word[1]/5)]; })
+        // Adjusting word size according to card size
+        wordsSizeFactor = ($(this).outerWidth() > 400 ? 3.0 : 5.0)
+
+        var tags_list = tags.map(function(word) { return [word[0], Math.round(word[1]/wordsSizeFactor)]; })
 
         WordCloud(cloud_dom_element, {
           gridSize: 12, 
