@@ -18,7 +18,7 @@ function processWordClouds() {
             tags.push([splittedTerm[0],parseInt(splittedTerm[1])]);
         });
 
-        var tags_list = tags.map(function(word) { return [word[0], Math.round(word[1]/4)]; })
+        var tags_list = tags.map(function(word) { return [word[0], Math.round(word[1]/5)]; })
 
         WordCloud(cloud_dom_element, {
           gridSize: 12, 
