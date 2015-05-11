@@ -42,8 +42,8 @@ function processWordClouds() {
     });
 }
 
-processWordClouds();
-
 $( window ).load(function() {
     processWordClouds();
 });
+
+processWordClouds();
