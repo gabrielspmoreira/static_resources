@@ -1,7 +1,7 @@
-$( document ).ready(function() {
+function processWordClouds() {
     $( ".smartconnect_wordcloud" ).each(function() {      
         console.log($(this).attr("data-processed"));
-        //if ($(this).attr("data-processed")) return;
+        if ($(this).attr("data-processed")) return;
 
         $(this).attr("data-processed","true");
 
@@ -41,4 +41,10 @@ $( document ).ready(function() {
         }
         cloud_dom_element.addEventListener("click", clicked);
     });
+}
+
+processWordClouds();
+
+$( window ).load(function() {
+    processWordClouds();
 });
