@@ -1,0 +1,546 @@
+{
+    "links":[
+        {
+            "source":44,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":19,
+            "strength":4,
+            "target":52
+        },
+        {
+            "source":28,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":47,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":17,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":14,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":13,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":27,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":5,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":12,
+            "strength":3,
+            "target":52
+        },
+        {
+            "source":3,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":1,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":41,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":39,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":6,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":20,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":32,
+            "strength":3,
+            "target":52
+        },
+        {
+            "source":24,
+            "strength":4,
+            "target":52
+        },
+        {
+            "source":46,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":9,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":43,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":15,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":29,
+            "strength":5,
+            "target":52
+        },
+        {
+            "source":10,
+            "strength":4,
+            "target":52
+        },
+        {
+            "source":31,
+            "strength":3,
+            "target":52
+        },
+        {
+            "source":23,
+            "strength":3,
+            "target":52
+        },
+        {
+            "source":4,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":50,
+            "strength":1,
+            "target":53
+        },
+        {
+            "source":37,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":37,
+            "strength":1,
+            "target":53
+        },
+        {
+            "source":38,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":7,
+            "strength":1,
+            "target":53
+        },
+        {
+            "source":40,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":8,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":2,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":45,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":30,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":11,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":51,
+            "strength":3,
+            "target":52
+        },
+        {
+            "source":22,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":42,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":25,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":33,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":0,
+            "strength":7,
+            "target":52
+        },
+        {
+            "source":16,
+            "strength":5,
+            "target":52
+        },
+        {
+            "source":36,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":49,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":18,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":35,
+            "strength":19,
+            "target":52
+        },
+        {
+            "source":35,
+            "strength":1,
+            "target":53
+        },
+        {
+            "source":34,
+            "strength":2,
+            "target":52
+        },
+        {
+            "source":26,
+            "strength":17,
+            "target":52
+        },
+        {
+            "source":21,
+            "strength":1,
+            "target":52
+        },
+        {
+            "source":48,
+            "strength":2,
+            "target":52
+        }
+    ],
+    "nodes":[
+        {
+            "idx":0,
+            "key":"Adriana Lima",
+            "type":"person"
+        },
+        {
+            "idx":1,
+            "key":"Rodrigo Fantinatti",
+            "type":"person"
+        },
+        {
+            "idx":2,
+            "key":"Mauro Tisato Takeda",
+            "type":"person"
+        },
+        {
+            "idx":3,
+            "key":"Davi Melazo",
+            "type":"person"
+        },
+        {
+            "idx":4,
+            "key":"Camila Moreira",
+            "type":"person"
+        },
+        {
+            "idx":5,
+            "key":"Guilherme da Rocha Alves Mendes",
+            "type":"person"
+        },
+        {
+            "idx":6,
+            "key":"Priscila Silva",
+            "type":"person"
+        },
+        {
+            "idx":7,
+            "key":"Henrique Souza",
+            "type":"person"
+        },
+        {
+            "idx":8,
+            "key":"Kleber Bacili",
+            "type":"person"
+        },
+        {
+            "idx":9,
+            "key":"Matheus Bastos Neves",
+            "type":"person"
+        },
+        {
+            "idx":10,
+            "key":"Flavio Henrique Furlanetto",
+            "type":"person"
+        },
+        {
+            "idx":11,
+            "key":"Barbara Araujo Schnneppel Correa",
+            "type":"person"
+        },
+        {
+            "idx":12,
+            "key":"Ana Luisa Correa de Oliveira Bezerra",
+            "type":"person"
+        },
+        {
+            "idx":13,
+            "key":"Juliana Rogatto",
+            "type":"person"
+        },
+        {
+            "idx":14,
+            "key":"Leonardo Ueki",
+            "type":"person"
+        },
+        {
+            "idx":15,
+            "key":"Helena Conde Moraes",
+            "type":"person"
+        },
+        {
+            "idx":16,
+            "key":"Giuliano Sposito",
+            "type":"person"
+        },
+        {
+            "idx":17,
+            "key":"Braian Takahira",
+            "type":"person"
+        },
+        {
+            "idx":18,
+            "key":"Joceline Seixas",
+            "type":"person"
+        },
+        {
+            "idx":19,
+            "key":"Igor Antenor Leal",
+            "type":"person"
+        },
+        {
+            "idx":20,
+            "key":"Lucas Arruda",
+            "type":"person"
+        },
+        {
+            "idx":21,
+            "key":"Roger Figueiredo Castro",
+            "type":"person"
+        },
+        {
+            "idx":22,
+            "key":"Daniel Felipe Paschoal Dardis",
+            "type":"person"
+        },
+        {
+            "idx":23,
+            "key":"Ana - Sustentabilidade",
+            "type":"person"
+        },
+        {
+            "idx":24,
+            "key":"Dagoberto Souza",
+            "type":"person"
+        },
+        {
+            "idx":25,
+            "key":"Marcos Vidolin",
+            "type":"person"
+        },
+        {
+            "idx":26,
+            "key":"Mauricio Borges",
+            "type":"person"
+        },
+        {
+            "idx":27,
+            "key":"Naia Costa",
+            "type":"person"
+        },
+        {
+            "idx":28,
+            "key":"Thiago Rodrigues",
+            "type":"person"
+        },
+        {
+            "idx":29,
+            "key":"Fernando Silva",
+            "type":"person"
+        },
+        {
+            "idx":30,
+            "key":"Julia Gomes de Oliveira",
+            "type":"person"
+        },
+        {
+            "idx":31,
+            "key":"Marcelo Vessoni",
+            "type":"person"
+        },
+        {
+            "idx":32,
+            "key":"Leonel Togniolli",
+            "type":"person"
+        },
+        {
+            "idx":33,
+            "key":"Anderson Nabas",
+            "type":"person"
+        },
+        {
+            "idx":34,
+            "key":"Flavio Lucio Pereira",
+            "type":"person"
+        },
+        {
+            "idx":35,
+            "key":"Thamara Melendes Rita",
+            "type":"person"
+        },
+        {
+            "idx":36,
+            "key":"Felipe Brito",
+            "type":"person"
+        },
+        {
+            "idx":37,
+            "key":"Vitor Luis Villar Neto",
+            "type":"person"
+        },
+        {
+            "idx":38,
+            "key":"Francisco Carlos de Souza",
+            "type":"person"
+        },
+        {
+            "idx":39,
+            "key":"Charles Aroldo da Silva",
+            "type":"person"
+        },
+        {
+            "idx":40,
+            "key":"Edy Watanabe",
+            "type":"person"
+        },
+        {
+            "idx":41,
+            "key":"Mateus Bahia",
+            "type":"person"
+        },
+        {
+            "idx":42,
+            "key":"Patricia Kusumi",
+            "type":"person"
+        },
+        {
+            "idx":43,
+            "key":"Kelly Cristina Alvaredo Matubaro",
+            "type":"person"
+        },
+        {
+            "idx":44,
+            "key":"Jaqueline Carmo Santos",
+            "type":"person"
+        },
+        {
+            "idx":45,
+            "key":"Leandro Araujo",
+            "type":"person"
+        },
+        {
+            "idx":46,
+            "key":"Solange Sobral",
+            "type":"person"
+        },
+        {
+            "idx":47,
+            "key":"Murilo Woigt Miranda",
+            "type":"person"
+        },
+        {
+            "idx":48,
+            "key":"Marilia Honorio",
+            "type":"person"
+        },
+        {
+            "idx":49,
+            "key":"Amanda Zani Gali",
+            "type":"person"
+        },
+        {
+            "idx":50,
+            "key":"Mars Cyrillo",
+            "type":"person"
+        },
+        {
+            "idx":51,
+            "key":"William Zara",
+            "type":"person"
+        },
+        {
+            "idx":52,
+            "key":"java",
+            "type":"words"
+        },
+        {
+            "idx":53,
+            "key":"python",
+            "type":"words"
+        }
+    ]
+}

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<!-- 
+http://thinkingonthinking.com/Getting-Started-With-D3/ 
+https://linkedjazz.org/network/?person=Buddy_Tate
+http://tarot-pedia.meteor.com/
+http://mbostock.github.io/d3/talk/20111116/force-collapsible.html
+-->
+
+<meta charset="utf-8">
+<style>
+
+
+
+</style>
+<body>
+</body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+
+var w = 1200,
+    h = 700;
+
+var circleWidth = 5;
+
+var fontFamily = 'Bree Serif',
+    fontSizeHighlight = '1.5em',
+    fontSizeNormal = '1em';
+
+var palette = {
+      "lightgray": "#819090",
+      "gray": "#708284",
+      "mediumgray": "#536870",
+      "darkgray": "#475B62",
+
+      "darkblue": "#0A2933",
+      "darkerblue": "#042029",
+
+      "paleryellow": "#FCF4DC",
+      "paleyellow": "#EAE3CB",
+      "yellow": "#A57706",
+      "orange": "#BD3613",
+      "red": "#D11C24",
+      "pink": "#C61C6F",
+      "purple": "#595AB7",
+      "blue": "#2176C7",
+      "green": "#259286",
+      "yellowgreen": "#738A05"
+  }          
+
+
+var vis = d3.select("body")
+    .append("svg:svg")
+      //.attr("class", "stage")
+      .attr("width", w)
+      .attr("height", h);
+
+//d3.json("ciandti_persons_words.json", function(error, graph) {
+
+d3.json("ciandti_d3_data_java_python.json", function(error, graph) {
+
+        var force = d3.layout.force()
+            .nodes(graph.nodes)
+            .links(graph.links)
+            .gravity(1)
+            .charge(-1000)
+            .linkDistance(300)
+            .size([w, h]);
+
+       var link = vis.selectAll(".link")
+              .data(graph.links)
+              .enter().append("line")
+                .attr("class", "link")
+                .attr("stroke", "#CCC")
+                .attr("fill", "none");
+
+       var node = vis.selectAll("circle.node")
+            .data(graph.nodes)
+            .enter().append("g")
+            .attr("class", "node")
+
+            //MOUSEOVER
+            .on("mouseover", function(d,i) {
+              if (d.type=='person') {
+                //CIRCLE
+                d3.select(this).selectAll("circle")
+                .transition()
+                .duration(250)
+                .style("cursor", "none")     
+                .attr("r", circleWidth+3)
+                .attr("fill",palette.orange);
+
+                //TEXT
+                d3.select(this).select("text")
+                .transition()
+                .style("cursor", "none")     
+                .duration(250)
+                .style("cursor", "none")     
+                .attr("font-size","1.5em")
+                .attr("x", 15 )
+                .attr("y", 5 )
+              } else {
+                //CIRCLE
+                d3.select(this).selectAll("circle")
+                .style("cursor", "none")     
+
+                //TEXT
+                d3.select(this).select("text")
+                .style("cursor", "none")     
+              }
+            })
+
+            //MOUSEOUT
+            .on("mouseout", function(d,i) {
+              if (d.type=='person') {
+                //CIRCLE
+                d3.select(this).selectAll("circle")
+                .transition()
+                .duration(250)
+                .attr("r", circleWidth)
+                .attr("fill",palette.pink);
+
+                //TEXT
+                d3.select(this).select("text")
+                .transition()
+                .duration(250)
+                .attr("font-size","1em")
+                .attr("x", 8 )
+                .attr("y", 4 )
+              }
+            })
+
+            .call(force.drag);
+
+
+          //CIRCLE
+          node.append("svg:circle")
+            .attr("cx", function(d) { return d.x; })
+            .attr("cy", function(d) { return d.y; })
+            .attr("r", circleWidth)
+            .attr("fill", function(d, i) { if (d.type=='person') { return  palette.red; } else { return palette.darkerblue } } )
+
+          //TEXT
+          node.append("text")
+            .text(function(d, i) { return d.key; })
+          .attr("x",    function(d, i) { return circleWidth + 5; })
+            .attr("y",            function(d, i) { if (d.type=='person') { return circleWidth + 0 }    else { return 8 } })
+            .attr("font-family",  "Bree Serif")
+            .attr("fill", "black")
+            .attr("font-size",    function(d, i) {  return  "1em"; })
+            .attr("text-anchor",  function(d, i) { if (d.type=='person') { return  "beginning"; }      else { return "end" } })
+
+
+
+      force.on("tick", function(e) {
+        node.attr("transform", function(d, i) {     
+              return "translate(" + d.x + "," + d.y + ")"; 
+          });
+          
+         link.attr("x1", function(d)   { return d.source.x; })
+             .attr("y1", function(d)   { return d.source.y; })
+             .attr("x2", function(d)   { return d.target.x; })
+             .attr("y2", function(d)   { return d.target.y; })
+      });
+
+      force.start();
+});
+
+</script>
